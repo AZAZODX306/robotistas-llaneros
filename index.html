@@ -1,0 +1,238 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Robotistas Llaneros</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: white;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-left: 10px;
+      letter-spacing: 1px;
+      color: #00f7ff;
+      text-shadow: 0 0 10px #00f7ffaa;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #00f7ff;
+      text-shadow: 0 0 10px #00f7ffaa;
+    }
+
+    .hero {
+      background: url('https://via.placeholder.com/1600x500') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+
+    main {
+      padding: 60px 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    #about p {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #1a1a2e, #16213e);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #00ffff;
+    }
+
+    footer {
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+      font-size: 0.9em;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffffaa;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">🤖 Robotistas Llaneros</div>
+        <ul>
+          <li><a href="#about">Sobre Nosotros</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bienvenidos al Futuro</h1>
+      <p>Innovación y tecnología en el corazón del llano colombiano.</p>
+    </div>
+  </section>
+
+  <main class="container">
+    
+    <section id="about">
+      <h2 style="text-align:center; color:#00ffff;">Sobre Nosotros</h2>
+      <p style="text-align:center;">Somos un grupo de jóvenes apasionados por la robótica, programación y automatización desde los llanos de Colombia. Nuestra misión es fomentar la educación STEM mediante proyectos prácticos y colaborativos.</p>
+    </section>
+
+    <section id="projects">
+      <h2 style="text-align:center; color:#00ffff;">Nuestros Proyectos</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Robot Educativo</h3>
+          <p>Un robot modular para enseñar electrónica y programación a estudiantes de colegios rurales.</p>
+        </div>
+        <div class="card">
+          <h3>Automatización Agrícola</h3>
+          <p>Sensores IoT para medir humedad del suelo y controlar sistemas de riego inteligente.</p>
+        </div>
+        <div class="card">
+          <h3>Competencias de Robótica</h3>
+          <p>Organizamos eventos regionales para promover la cultura maker entre jóvenes emprendedores.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Robotistas Llaneros. Todos los derechos reservados.</p>
+    <div class="social-icons">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+</body>
+</html>
+```
